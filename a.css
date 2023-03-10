@@ -1,0 +1,272 @@
+@font-face {
+  font-family: "fonte2";
+  src: url("fonts/fonte2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fonte3";
+  src: url("fonts/fonte3.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fonte4";
+  src: url("fonts/fonte4.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #212121;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-family: "fonte2", sans-serif;
+  letter-spacing: 6px;
+  line-height: 6px;
+  text-shadow: 0 0 5px rgb(9, 59, 78, 0.3);
+  font-weight: bold;
+}
+
+.navbar a {
+  display: flex;
+  line-height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.navbar a:hover {
+  background-color: rgb(255, 41, 109);
+  box-shadow: 0 0 10px 0 rgb(255, 41, 109);
+  color: white;
+  border-radius: 20px;
+  align-self: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.conteudo {
+  width: 100%;
+  max-width: 200px;
+  box-sizing: border-box;
+
+  border-radius: 20px;
+  background-color: rgb(9, 59, 78, 0.3);
+  background-image: url(image/back.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-style: solid;
+  border-color: rgb(255, 41, 109);
+  border-width: 2px;
+  box-shadow: 0 0 10px 0 rgb(255, 41, 109);
+
+  padding: 1rem;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(92, 236, 221);
+  border-width: 3px;
+  box-shadow: 0 0 15px 0 rgba(5, 216, 231, 1);
+}
+
+img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.nome {
+  width: 100%;
+  background: red;
+  appearance: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: "fonte3", sans-serif;
+  letter-spacing: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar {
+  margin-top: 5px;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  display: grid;
+  margin-top: 10px;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Conteúdo dinâmico */
+
+.conteudoSobre,
+.conteudoProjetos,
+.conteudoContato {
+  display: none;
+}
+
+.conteudoSobre {
+  color: white;
+  font-family: "fonte4", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 5px;
+  line-height: 20px;
+  align-self: center;
+}
+
+section {
+  margin-top: 20px;
+}
+
+section ul {
+  list-style-position: inside;
+}
+
+.tecnologias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.conteudoSobre img {
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.conteudoSobre h2 {
+  letter-spacing: 5px;
+  text-align: center;
+  font-family: "fonte3", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.conteudoSobre a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "fonte3", sans-serif;
+  font-size: 10px;
+  line-height: 20px;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: rgb(255, 41, 109);
+  border-width: 2px;
+  box-shadow: 0 0 10px 0 rgb(255, 41, 109);
+}
+
+.conteudoSobre a:hover {
+  background-color: rgb(255, 41, 109);
+  color: white;
+}
+
+.conteudoContato {
+  color: white;
+  font-family: "fonte4", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 5px;
+  line-height: 20px;
+}
+
+.conteudoContato ul {
+  list-style: none;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.conteudoContato h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+  font-family: "fonte3", sans-serif;
+  font-size: 15px;
+}
+
+.conteudoContato img {
+  width: 40px;
+  height: 40px;
+  gap: 10px;
+  grid-column: 2;
+}
+
+.conteudoContato a {
+  gap: 16px;
+}
+
+.conteudoProjetos {
+  color: white;
+  font-family: "fonte3", sans-serif;
+  font-size: 15px;
+  text-align: left;
+  padding: 5px;
+  line-height: 20px;
+}
+
+.conteudoProjetos h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "fonte3", sans-serif;
+  letter-spacing: 5px;
+  font-size: 15px;
+}
+
+.conteudoProjetos a:hover {
+  background-color: rgba(5, 216, 231, 1);
+  color: white;
+}
+
+.lista a {
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "fonte3", sans-serif;
+  letter-spacing: 5px;
+  font-size: 15px;
+  border-style: solid;
+  border-color: rgb(92, 236, 221);
+  border-width: 3px;
+  box-shadow: 0 0 15px 0 rgba(5, 216, 231, 1);
+  border-radius: 20px;
+  font-family: "fonte4", sans-serif;
+}

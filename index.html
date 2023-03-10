@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio</title>
+  <link rel="stylesheet" type="text/css" href="a.css">
+</head>
+
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="/video/Sequence.mp4" type="video/mp4">
+  </video>
+  <audio id="meu-audio" autoplay loop>
+    <source src="music/musica.mp3" type="audio/mpeg">
+  </audio>
+  <main>
+    <div class="conteudo">
+      <div class="avatar">
+        <img src="/image/avatar.jpg" alt="minha imagem">
+      </div>
+      <button type="button" class="nome">Vitoria</button>
+      <nav>
+        <ul class="navbar">
+          <li><a href="#" class="sobre">Sobre</a></li>
+          <li><a href="#" class="projetos">Projetos</a></li>
+          <li><a href="#" class="contato">Contato</a></li>
+        </ul>
+      </nav>
+      <section class="conteudoSobre">
+        <h2>Sobre</h2>
+        <p>Me chamo Vitoria F, tenho 26 anos e sou de Curitiba-Parana.
+          <br><br>
+          Estudo Analise e Desenvolvimento de Sistemas na UFPR, e estou no 3º semestre.
+          <br><br>
+          Tenho conhecimento nas tecnologias:
+          <br><br>
+        <ul class="tecnologias">
+          <li><img src="https://img.icons8.com/color/96/null/javascript--v1.png" alt="js"></li>
+          <li><img src="https://img.icons8.com/color/96/null/html-5--v1.png" alt="html"></li>
+          <li><img src="https://img.icons8.com/color/96/null/css3.png" alt="css"></li>
+          <li><img src="https://img.icons8.com/color/96/null/vue-js.png" alt="vue-js"></li>
+          <li><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/null/external-nuxt-js-a-free-and-open-source-web-application-framework-logo-shadow-tal-revivo.png" alt="nuxt"></li>
+          <li><img src="https://img.icons8.com/color/96/null/mysql-logo.png" alt="mysql"></li>
+          <li><img src="https://img.icons8.com/offices/80/null/php-logo.png" alt="php"></li>
+          <li><img src="https://img.icons8.com/color/96/null/bootstrap.png" alt="bootstrap"></li>
+          <li><img src="https://img.icons8.com/color/96/null/git.png" alt="git"></li>
+          <li><img src="https://img.icons8.com/fluency/96/null/figma.png" alt="figma"></li>
+
+        </ul>
+        </p>
+
+        <a href="https://drive.google.com/file/d/1avskaOBzfU6U1pa3eEOvO9xbPzZCKlFO/view?usp=sharing" target="_blank" rel="noopener">Curriculo </a>
+
+      </section>
+      <section class="conteudoProjetos">
+        <h2>Projetos</h2>
+        <div class="lista">
+          <a href="https://github.com/vihari2/NLW-page">NLW-page</a>
+          <a href="https://github.com/vihari2/agenda-online">Agenda Online</a>
+          <a href="https://github.com/vihari2/Processo-Seletivo-Ecomp">PS-Ecomp</a>
+        </div>
+      </section>
+      <section class="conteudoContato">
+        <h2>Contato</h2>
+        <ul>
+          <li> <a href="https://github.com/vihari2" target="_blank" rel="noopener"><img src="https://img.icons8.com/clouds/100/null/github.png" alt="github"></a></li>
+          <li><a href="https://gitlab.com/freitasvitoria712" target="_blank" rel="noopener"><img src="https://img.icons8.com/color/96/null/gitlab.png" alt="gitlab"></a></li>
+          <li> <a href="https://www.linkedin.com/in/vih-freitasm/" target="_blank" rel="noopener"><img src="https://img.icons8.com/color/96/null/linkedin-circled--v1.png" alt="linkedin"></a></li>
+          <li> <a href="mailto:freitasvitoria712@gmail.com" target="_blank" rel="noopener"><img src="https://img.icons8.com/cute-clipart/128/null/gmail.png" alt="Email"></a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <script>
+    const meuAudio = document.querySelector('meu-audio');
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        meuAudio.play();
+      });
+    });
+
+
+    const sobre = document.querySelector('.sobre');
+    const projetos = document.querySelector('.projetos');
+    const contato = document.querySelector('.contato');
+    const conteudoSobre = document.querySelector('.conteudoSobre');
+    const conteudoProjetos = document.querySelector('.conteudoProjetos');
+    const conteudoContato = document.querySelector('.conteudoContato');
+    const nome = document.querySelector('.nome');
+
+    sobre.addEventListener('click', () => {
+      conteudoSobre.style.display = 'block';
+      conteudoProjetos.style.display = 'none';
+      conteudoContato.style.display = 'none';
+    });
+    projetos.addEventListener('click', () => {
+      conteudoProjetos.style.display = 'block';
+      conteudoSobre.style.display = 'none';
+      conteudoContato.style.display = 'none';
+    });
+    contato.addEventListener('click', () => {
+      conteudoContato.style.display = 'block';
+      conteudoProjetos.style.display = 'none';
+      conteudoSobre.style.display = 'none';
+    });
+    nome.addEventListener('click', () => {
+      conteudoSobre.style.display = 'none';
+      conteudoProjetos.style.display = 'none';
+      conteudoContato.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>
